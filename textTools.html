@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Text tools</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="ASSETS/CSS/myStyle.css">
+    <link rel="stylesheet" href="ASSETS/CSS/hacker.css">
+</head>
+<body>
+<nav class="navbar navbar-dark  ">
+    <div class="container-fluid">
+        <a href="#" class="navbar">TEXT TOOLS</a>
+        <button type="button" data-toggle="collapse" data-target="#navbar-menu1" class="navbar-toggler">
+            <span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbar-menu1">
+            <ul class="navbar-nav mr-auto">
+                <li><a href="popup.html" class="nav-link text-warning text-center">MD5 HASHER</a></li>
+                <li><a href="sha.html" class="nav-link text-warning text-center">SHA HASHER</a></li>
+                <li><a href="urlEncodeDecode.html" class="nav-link text-warning text-center">URL ENCODE | DECODE</a></li>
+                <li><a href="base64EncodeDecode.html" class="nav-link text-warning text-center ">BASE64 ENCODE | DECODE </a></li>
+                <li><a href="numberBaseConvertor.html" class="nav-link text-warning text-center">NUMBER BASE CONVERTOR</a></li>
+                <li><a href="loremGenerator.html" class="nav-link text-warning text-center">LOREM GENERATOR</a></li>
+                <li><a href="about.html" class="nav-link text-warning text-center">ABOUT</a></li>
+
+
+            </ul>
+            <form>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container">
+<form>
+    <p class="area" id="tools">
+        <textarea placeholder="Your text" id="source" class="form-control input-lg"></textarea>
+
+    </p>
+    <div id="command" class="area mt-4 mb-4 ">
+        <label for="convertors">Operation</label>
+        <select role="button" id="convertors" >
+
+            <option value="uppercase">Uppercase</option>
+
+            <option value="titlecase">Title Case</option>
+
+            <option value="lowercase">Lowercase</option>
+
+            <option value="countchars">Count characters</option>
+
+            <option value="countwords">Count words</option>
+
+            <option value="countlines">Count lines</option>
+
+            <option value="rot13">Rotate 13</option>
+
+            <option value="sortlinesalphaci">Sort lines alpha (case insensitive)</option>
+
+            <option value="sortlinesalpha">Sort lines alpha</option>
+
+            <option value="wordfreq">Word frequency</option>
+
+            <option value="charfreq">Character frequency</option>
+
+            <option value="columnextract">Column from table</option>
+
+            <option value="trimlines_start">Trim lines start</option>
+
+            <option value="trimlines_end">Trim lines end</option>
+
+            <option value="trimlines">Trim lines</option>
+
+            <option value="replace_new_line">Replace text with new line</option>
+
+            <option value="replace">Replace text</option>
+
+            <option value="replace_regexp">Replace text regexp</option>
+
+            <option value="jsonformat">Format JSON</option>
+
+            <option value="addlinenumbers">Add line numbers</option>
+
+            <option value="splittext">Split text</option>
+
+            <option value="reverse">Reverse text</option>
+
+            <option value="generate_numbers">Generate numbers</option>
+
+            <option value="unix_to_datetime">Unix to date</option>
+
+            <option value="check_hash">Identify Hash</option>
+
+            <option value="prefix_suffix">Prefix/Suffix lines</option>
+
+            <option value="format_numbers">Format Numbers</option>
+
+            <option value="underscore">Underscore</option>
+
+            <option value="strikeout">Strikeout</option>
+
+            <option value="shuffle">Shuffle</option>
+
+            <option value="remove_duplicate">Remove duplicate lines</option>
+
+            <option value="remove_empty">Remove empty lines</option>
+
+            <option value="expand_template">Expand template</option>
+
+            <option value="indent_space">Indent with spaces</option>
+
+            <option value="slugify">Slugify</option>
+
+            <option value="strip_nonalhanum">Strip non-alphanumeric</option>
+
+        </select>
+        <a id="help" href="#" title="Help on selected command">?</a>
+        <input type="text" id="param1" />
+        <input type="text" id="param2" />
+        <button class="recommend btn btn-primary" id="convert" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-square" viewBox="0 0 16 16">
+            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+            <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"/>
+        </svg></button>
+        <button id="up" title="Move result up" class="btn btn-primary">^</button>
+        <button class="btn btn-success" type="button" id="share" title="Share" style="display:none">🔗</button>
+    </div>
+    <p class="area">
+        <textarea id="target" placeholder="Result" class="form-control input-lg"></textarea>
+    </p>
+</form>
+<button type="button" class="btn btn-primary mt-4" id="copyElement">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path>
+        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path>
+    </svg>
+    Copy
+</button>
+<div id="operations" class="container-fluid mt-4">
+
+    <p id="uppercase"><b>Uppercase</b> - converts all characters to upper case <a href="#tools">↑</a></p>
+
+    <p id="titlecase"><b>Title Case</b> - capitalizes every first character of word <a href="#tools">↑</a></p>
+
+    <p id="lowercase"><b>Lowercase</b> - converts all characters to lower case <a href="#tools">↑</a></p>
+
+    <p id="countchars"><b>Count characters</b> - counts all characters in text <a href="#tools">↑</a></p>
+
+    <p id="countwords"><b>Count words</b> - counts words in text <a href="#tools">↑</a></p>
+
+    <p id="countlines"><b>Count lines</b> - counts new lines in text <a href="#tools">↑</a></p>
+
+    <p id="rot13"><b>Rotate 13</b> - Moves each character with 13 positions forward in the ASCII table <a href="#tools">↑</a></p>
+
+    <p id="sortlinesalphaci"><b>Sort lines alpha (case insensitive)</b> - Sorts text lines alphabetically ignoring character case <a href="#tools">↑</a></p>
+
+    <p id="sortlinesalpha"><b>Sort lines alpha</b> - Sorts text lines alphabetically <a href="#tools">↑</a></p>
+
+    <p id="wordfreq"><b>Word frequency</b> - How many times each word is used <a href="#tools">↑</a></p>
+
+    <p id="charfreq"><b>Character frequency</b> - How many times each character is used <a href="#tools">↑</a></p>
+
+    <p id="columnextract" data-param1="Column number"><b>Column from table</b> - Allows you to get text column from HTML table. Copy and paste the table content in the text field and type the column number you want to extract then press Start <a href="#tools">↑</a></p>
+
+    <p id="trimlines_start"><b>Trim lines start</b> - Removes whitespace from beginning of lines <a href="#tools">↑</a></p>
+
+    <p id="trimlines_end"><b>Trim lines end</b> - Removes whitespace from end of lines <a href="#tools">↑</a></p>
+
+    <p id="trimlines"><b>Trim lines</b> - Removes whitespace from beginning and end of lines <a href="#tools">↑</a></p>
+
+    <p id="replace_new_line" data-param1="Find"><b>Replace text with new line</b> - Replaces string with new line <a href="#tools">↑</a></p>
+
+    <p id="replace" data-param1="Find" data-param2="Replace"><b>Replace text</b> - Replaces one string with another <a href="#tools">↑</a></p>
+
+    <p id="replace_regexp" data-param1="Find" data-param2="Replace"><b>Replace text regexp</b> - Replaces regexp match with string <a href="#tools">↑</a></p>
+
+    <p id="jsonformat"><b>Format JSON</b> - Pretty format JSON string <a href="#tools">↑</a></p>
+
+    <p id="addlinenumbers"><b>Add line numbers</b> - Add line number before every line of text <a href="#tools">↑</a></p>
+
+    <p id="splittext" data-param1="Separator"><b>Split text</b> - Splits text by separator <a href="#tools">↑</a></p>
+
+    <p id="reverse"><b>Reverse text</b> - Reverses text <a href="#tools">↑</a></p>
+
+    <p id="generate_numbers" data-param1="From number" data-param2="To number"><b>Generate numbers</b> - Generates numbers withing the provided range <a href="#tools">↑</a></p>
+
+    <p id="unix_to_datetime"><b>Unix to date</b> - Converts UNIX timestamp to Datetime string <a href="#tools">↑</a></p>
+
+    <p id="check_hash"><b>Identify Hash</b> - Try to identify hash string <a href="#tools">↑</a></p>
+
+    <p id="prefix_suffix" data-param1="Prefix" data-param2="Suffix"><b>Prefix/Suffix lines</b> - Adds prefix and/or suffix to each line of the text <a href="#tools">↑</a></p>
+
+    <p id="format_numbers"><b>Format Numbers</b> - Format numbers according to the current browser locale <a href="#tools">↑</a></p>
+
+    <p id="underscore"><b>Underscore</b> - adds underscore to the text <a href="#tools">↑</a></p>
+
+    <p id="strikeout"><b>Strikeout</b> - strikes out the text <a href="#tools">↑</a></p>
+
+    <p id="shuffle"><b>Shuffle</b> - Shuffle the lines of the text <a href="#tools">↑</a></p>
+
+    <p id="remove_duplicate"><b>Remove duplicate lines</b> - Removes duplicate lines from the text <a href="#tools">↑</a></p>
+
+    <p id="remove_empty"><b>Remove empty lines</b> - Removes empty lines from the text <a href="#tools">↑</a></p>
+
+    <p id="expand_template"><b>Expand template</b> - Expand text template with placeholder e.g. 'A [green|blue] [field|grass].' <a href="#tools">↑</a></p>
+
+    <p id="indent_space" data-param1="Number spaces"><b>Indent with spaces</b> - Indent each line with the chosen number of spaces (defaults to 2) <a href="#tools">↑</a></p>
+
+    <p id="slugify"><b>Slugify</b> - Converts string to slug replacing non-ascii symbols with - <a href="#tools">↑</a></p>
+
+    <p id="strip_nonalhanum"><b>Strip non-alphanumeric</b> - Strips non-alphanumeric characters <a href="#tools">↑</a></p>
+
+</div>
+</div>
+
+<script src="ASSETS/JS/textTools.js"></script>
+<script src="ASSETS/JS/bootstrap.bundle.min.js"></script>
+</body>
+</html>

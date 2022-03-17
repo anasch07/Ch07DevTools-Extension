@@ -1,0 +1,74 @@
+body {
+    color: #333;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+header h1 a{
+    color: #333;
+    font-size: 1.4em;
+    text-decoration: none;
+}
+textarea {
+    height: 10em;
+    width: 99%;
+}
+.area {
+    border: 1px solid silver;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    padding: .6em;
+}
+.fr {
+    float:right;
+}
+header {
+    min-height: 65px
+}
+p:target {
+}
+.area label {
+    font-weight: bold;
+}
+pre code{
+
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    display: block;
+    padding: 1em;
+}
+#article {
+    padding: 1em 0;
+}
+body {
+    min-width: 500px;
+    font-size:9pt;
+    margin: .4em;
+}
+#operations {
+    height: 100px;
+    overflow-y:scroll;
+}
+#operations a {
+    color: #333;
+    text-decoration:none;
+}
+.area {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+textarea {
+    height: 10em;
+}
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.5);
+}

@@ -1,0 +1,17 @@
+/*.spinspinspin{*/
+/*animation-name: spin;*/
+/*    animation-duration: 4s;*/
+/*    animation-iteration-count: infinite;*/
+/*}*/
+
+/*@keyframes spin {*/
+/*    0%{*/
+/*        transform: rotate(0deg);*/
+/*    }*/
+/*    100%{*/
+/*        transform: rotate(1440deg);*/
+/*    }*/
+body{
+    min-width: 500px;
+}
+

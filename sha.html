@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="ASSETS/CSS/myStyle.css">
+    <link rel="stylesheet" href="ASSETS/CSS/hacker.css">
+
+    <title>CH07 DEV TOOL</title>
+</head>
+
+<body>
+<div class="container">
+    <nav class="navbar navbar-dark  ">
+        <div class="container-fluid">
+            <a href="#" class="navbar">SHA HASHER</a>
+            <button type="button" data-toggle="collapse" data-target="#navbar-menu1" class="navbar-toggler">
+                <span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbar-menu1">
+                <ul class="navbar-nav mr-auto">
+                    <li><a href="popup.html" class="nav-link text-warning text-center ">MD5 HASHER</a></li>
+                    <li><a href="urlEncodeDecode.html" class="nav-link text-warning text-center">URL ENCODE | DECODE</a></li>
+                    <li><a href="textTools.html" class="nav-link text-warning text-center">TEXT TOOLS</a></li>
+                    <li><a href="base64EncodeDecode.html" class="nav-link text-warning text-center">BASE64 ENCODE | DECODE </a></li>
+                    <li><a href="numberBaseConvertor.html" class="nav-link text-warning text-center">NUMBER BASE CONVERTOR </a></li>
+                    <li><a href="loremGenerator.html" class="nav-link text-warning text-center">LOREM GENERATOR</a></li>
+                    <li><a href="about.html" class="nav-link text-warning text-center">ABOUT</a></li>
+
+
+                </ul>
+                <form>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="input-group mb-3 mt-4">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">DATA</span>
+        </div>
+        <input  autofocus placeholder="Type here" type="text" id="input" class="form-control sha" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+    </div>
+
+
+    <div class="input-group mb-3 mt-4" >
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="outputGroup1-sizing-default">SHA-1</span>
+        </div>
+        <input readonly type="text" id="sha1output" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        <button type="button" class="btn btn-primary" id="copyElement1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path>
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path>
+            </svg>
+            Copy
+        </button>
+    </div>
+
+
+    <div class="input-group mb-3 mt-4" >
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="outputGroup-sizing-default">SHA-256</span>
+        </div>
+        <input readonly type="text" id="sha256output" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        <button type="button" class="btn btn-primary" id="copyElement256">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path>
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path>
+            </svg>
+            Copy
+        </button>
+    </div>
+
+    <div class="input-group mb-3 mt-4" >
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="outputGroup-sizing-default256">SHA-512</span>
+        </div>
+        <input readonly type="text" id="sha512output" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        <button type="button" class="btn btn-primary sha" id="copyElement512">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path>
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path>
+            </svg>
+            Copy
+        </button>
+    </div>
+
+
+
+
+
+</div>
+<script src="ASSETS/JS/sha1.js"></script>
+<script src="ASSETS/JS/sha512.js"></script>
+<script src="ASSETS/JS/sha256.js"></script>
+<script src="ASSETS/JS/popup.js"></script>
+<script src="ASSETS/JS/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
