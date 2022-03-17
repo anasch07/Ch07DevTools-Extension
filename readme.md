@@ -67,7 +67,7 @@ Ch07DevTools an extension that helps developers with daily tasks:
 # Download
 
 * [Download Version 1.0](https://drive.google.com/uc?id=1OfYyRBk_U6aq4zPUom7y0hsbq9yIQuOl&export=download) 
-* [A simple tutorial  how to install it !](https://google.com)
+* [A simple tutorial  how to install it !](https://youtu.be/ItCjJHVMldA)
 
 # Screenshots
 ![shaHasher](ASSETS/IMGS/1.png)
